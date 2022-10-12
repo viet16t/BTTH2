@@ -1,0 +1,19 @@
+@model IEnumerable<DoanQuocVietBTTH2.Models.Person>
+<p>
+   <a class="btn btn-success" asp-action="Create">Create a new Person</a>
+</p>
+<table class="table table-all"
+    <tr>
+       <th>Person ID </th>
+       <th>Person Name </th>
+       <th>Person Age </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+           <td>@Html.DisplayFor(m => item.StudentID)</td>
+           <td>@Html.DisplayFor(m => item.StudentName)</td>
+           <td>@Html.DisplayFor(m => item.StudenAge)</td>
+        </tr>
+    }
+</table>

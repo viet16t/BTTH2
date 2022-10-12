@@ -1,0 +1,11 @@
+@{
+    string StudentID = Guid.NewGuid().ToString();
+}
+<form asp-Action="Create" method="post">
+    <div class="mb-3">
+      <label for="StudentName" class="form-label">Student Name:</label>
+      <input type="text" class="form-control" id="Student Name" asp-for="StudentName" >
+    </div>
+      <input type="hidden" asp-for="StudentID" value=@id>
+      <button type="submit" class="btn btn-primary">Submit</button>  
+</form>
