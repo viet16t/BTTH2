@@ -265,3 +265,7 @@ D:\DoanQuocVietBTTH2\obj\Debug\net6.0\refint\DoanQuocVietBTTH2.dll
 D:\DoanQuocVietBTTH2\obj\Debug\net6.0\DoanQuocVietBTTH2.pdb
 D:\DoanQuocVietBTTH2\obj\Debug\net6.0\DoanQuocVietBTTH2.genruntimeconfig.cache
 D:\DoanQuocVietBTTH2\obj\Debug\net6.0\ref\DoanQuocVietBTTH2.dll
+D:\DoanQuocVietBTTH2\bin\Debug\net6.0\EPPlus.dll
+D:\DoanQuocVietBTTH2\bin\Debug\net6.0\EPPlus.Interfaces.dll
+D:\DoanQuocVietBTTH2\bin\Debug\net6.0\EPPlus.System.Drawing.dll
+D:\DoanQuocVietBTTH2\bin\Debug\net6.0\Microsoft.IO.RecyclableMemoryStream.dll
