@@ -9,5 +9,6 @@ namespace DoanQuocVietBTTH2.Data
         {}
         public DbSet<Student> Students {get; set;}
         public DbSet<DoanQuocVietBTTH2.Models.Employee> Employee {get; set; }
+        public DbSet<DoanQuocVietBTTH2.Models.Faculty> Faculty {get; set; } = default!;
     }
 }

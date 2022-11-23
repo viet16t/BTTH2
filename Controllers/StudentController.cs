@@ -1,6 +1,7 @@
 using DoanQuocVietBTTH2.Data;
 using DoanQuocVietBTTH2.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 namespace DoanQuocVietBTTH2.Controllers
 
@@ -13,6 +14,7 @@ namespace DoanQuocVietBTTH2.Controllers
         }
         public IActionResult Create()
         {
+            ViewData["FacultyID"] = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(_context.Faculty, "FacultyID","FacultyName");
             return View();
         }
         public async Task<IActionResult> Index()
@@ -21,14 +23,17 @@ namespace DoanQuocVietBTTH2.Controllers
             return View(model);
         }
         [HttpPost]
-        public async Task<IActionResult>Create(StudentController std)
+        public async Task<IActionResult>Create([Bind("StudentID,StudentName,FacultyID")] Student std)
         {
             if(ModelState.IsValid)
             {
                 _context.Add(std);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-            }return View(std);
+           
+            }
+            ViewData["Faculty"] = new SelectList(_context.Faculty, "FacultyID", "FacultyName", std.FacultyID);
+            return View(std);
         }
         private bool StudentExists(string id)
         {
